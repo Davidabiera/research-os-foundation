@@ -50,6 +50,18 @@ We do not just "chat" with AI. We follow a strict operating loop to ensure quali
 
 ---
 
+## Initialization Contract
+
+`initialize_project` is contract-driven and should follow these canonical references:
+
+1. Contract (single source of truth): `S20-workflows/initialize-project-contract.md`
+2. Save routing table: `S00-foundation/save-map.md`
+3. Legacy compatibility policy: `S00-foundation/legacy-artifacts.md`
+4. Test cases for repeatable validation: `S30-examples/tests/initialize-project-test-cases.md`
+5. Example run reports: `S30-examples/test-runs/`
+
+---
+
 ## 🚀 Getting Started
 
 *Start here: `S00-foundation/onboarding.md`*
@@ -84,3 +96,5 @@ This repo is "Codex-First". It includes:
 ---
 
 *Built for the **Advanced Agentic Coding** initiative.*
+
+
