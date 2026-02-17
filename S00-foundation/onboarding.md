@@ -26,5 +26,5 @@
 ## 4) What “done” looks like
 - Core artifacts are present and correctly named (PRD, plan, README, and run ledger).
 - Artifacts intended for reuse are in **banked** state after review.
-- `artifacts/run-ledger.md` is updated for the run.
+- `S20-workflows/run-ledger.md` is updated for the run.
 - Promotion target is explicitly recorded (for example `S20`, `S30`, or a specific promoted file path).

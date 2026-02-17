@@ -12,12 +12,12 @@ Ensure every run ends with persisted artifacts and an updated run outputs ledger
 1. Run context (task prompt, workflow used, operator).
 2. List of files created/updated during the run.
 3. Review status (`draft`, `reviewed`, `banked`).
-4. Current run ledger file (`artifacts/run-ledger.md`).
+4. Current run ledger file (`S20-workflows/run-ledger.md`).
 5. Ledger schema reference (`S20-workflows/run-ledger-schema.md`).
 
 ## Outputs (Artifact Format)
 - Saved run outputs at canonical file paths.
-- Updated `artifacts/run-ledger.md` with a new appended row.
+- Updated `S20-workflows/run-ledger.md` with a new appended row.
 - Promotion note in ledger when artifacts move to `S10`, `S20`, or `S30`.
 
 ## Steps
@@ -33,7 +33,7 @@ Ensure every run ends with persisted artifacts and an updated run outputs ledger
    - Set each artifact to `draft`, `reviewed`, or `banked`.
    - Ensure filenames follow living file naming policy.
 4. **Update Run Ledger**
-   - Open `artifacts/run-ledger.md`.
+   - Open `S20-workflows/run-ledger.md`.
    - Append a new row using `S20-workflows/run-ledger-schema.md` columns.
    - Include commit hash when available.
 5. **Validate Completion**

@@ -83,9 +83,9 @@ Describe the core user/business problem this project solves.
 3.
 
 ## 15. Initial Artifact Plan
-- `docs/prd.md`
-- `docs/project-plan.md`
-- `artifacts/run-ledger.md`
+- `S00-foundation/prd.md`
+- `S20-workflows/project-plan.md`
+- `S20-workflows/run-ledger.md`
 - `README.md`
 
 ## 16. Approval

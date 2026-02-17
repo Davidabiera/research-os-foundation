@@ -8,7 +8,7 @@
 Track what each run produced, where outputs were saved, and what was promoted to banked knowledge.
 
 ## Storage
-- Default path: `artifacts/run-ledger.md` inside each project repository.
+- Default path: `S20-workflows/run-ledger.md` inside each project repository.
 - One row per run.
 
 ## Required Columns

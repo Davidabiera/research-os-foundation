@@ -88,9 +88,9 @@ Research updates are scattered; teams need one reliable weekly summary artifact.
 3. Should publication be email, wiki, or both?
 
 ## 15. Initial Artifact Plan
-- `docs/prd.md`
-- `docs/project-plan.md`
-- `artifacts/run-ledger.md`
+- `S00-foundation/prd.md`
+- `S20-workflows/project-plan.md`
+- `S20-workflows/run-ledger.md`
 - `README.md`
 
 ## 16. Approval
@@ -101,9 +101,9 @@ Research updates are scattered; teams need one reliable weekly summary artifact.
 
 ## Initial artifacts created by workflow
 - `README.md`
-- `docs/prd.md`
-- `docs/project-plan.md`
-- `artifacts/run-ledger.md`
+- `S00-foundation/prd.md`
+- `S20-workflows/project-plan.md`
+- `S20-workflows/run-ledger.md`
 - `.gitignore`
 - `src/`
 - `tests/`
@@ -112,7 +112,7 @@ Research updates are scattered; teams need one reliable weekly summary artifact.
 
 | run_id | date_utc | operator | workflow_used | inputs_summary | outputs_created | outputs_updated | review_status | promotion_target | commit_ref | notes |
 |---|---|---|---|---|---|---|---|---|---|---|
-| 2026-02-16-001 | 2026-02-16 | codex | workflow-trigger-to-repo | PRD ready for paper-pulse-digest | docs/prd.md; docs/project-plan.md; artifacts/run-ledger.md | README.md | banked | S30-examples/example-weekly-digest-template.md | deadbee | Boot sequence complete; one reusable artifact promoted |
+| 2026-02-16-001 | 2026-02-16 | codex | workflow-trigger-to-repo | PRD ready for paper-pulse-digest | S00-foundation/prd.md; S20-workflows/project-plan.md; S20-workflows/run-ledger.md | README.md | banked | S30-examples/example-weekly-digest-template.md | deadbee | Boot sequence complete; one reusable artifact promoted |
 
 ## Promotion target usage (one example)
 - **Promoted file:** `docs/weekly-digest-template.md` (initially Draft in the project repo).

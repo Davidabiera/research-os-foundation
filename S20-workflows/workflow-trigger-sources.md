@@ -26,14 +26,14 @@ The PRD is the trigger object for starting work. The source of that PRD can vary
 
 ### Expected automation steps
 1. Create (or select) the target repository.
-2. Copy PRD fields into `docs/prd.md` using `./templates/prd-template.md`.
+2. Copy PRD fields into `S00-foundation/prd.md` using `./templates/prd-template.md`.
 3. Create initial issues/tasks from requirements and milestones.
 4. Create a Codex kickoff file (context + first-run checklist).
 
 ### Manual fallback (if automation is not wired)
 1. Export/copy the Notion PRD content.
 2. Run `./workflow-trigger-to-repo.md` manually.
-3. Paste PRD into `docs/prd.md` and commit startup files.
+3. Paste PRD into `S00-foundation/prd.md` and commit startup files.
 4. Open in Codex and run first cycle.
 
 ## 2) Slack (channel or slash command)
@@ -52,7 +52,7 @@ Status: Ready
 ### Expected automation steps
 1. Parse message fields and validate required PRD fields.
 2. Create/select repository and scaffold startup folders/files.
-3. Generate `docs/prd.md`, `docs/project-plan.md`, and `artifacts/run-ledger.md`.
+3. Generate `S00-foundation/prd.md`, `S20-workflows/project-plan.md`, and `S20-workflows/run-ledger.md`.
 4. Post confirmation with repo link and next-step Codex command.
 
 ### Manual fallback steps
@@ -67,7 +67,7 @@ Status: Ready
 2. Keep the same section structure (`S00`, `S10`, `S20`, `S30`, `S90`).
 
 ### Where to paste PRD
-- Paste PRD content into `docs/prd.md` in the new project using `./templates/prd-template.md`.
+- Paste PRD content into `S00-foundation/prd.md` in the new project using `./templates/prd-template.md`.
 
 ### How to start the first run
 1. Execute `./workflow-trigger-to-repo.md` to confirm startup artifacts.

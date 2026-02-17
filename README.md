@@ -3,7 +3,10 @@
 
 > **"Don't do the work. Define the work."**
 
-This repository is the default starting point for projects that treat AI agents as coworkers, not just chatbots. It provides a structured file system, defined primitives, and repeatable workflows to ensure high-quality, reviewable outputs.
+<!-- RULE: initialize_project may only update text inside the summary block below. -->
+<!-- PROJECT_SUMMARY_START -->
+Research OS Foundation is a codex-first operating system for agentic work. Goal: provide a repeatable structure of primitives, workflows, and artifacts so teams can move from idea to reviewable, bankable outputs with traceability.
+<!-- PROJECT_SUMMARY_END -->
 
 ---
 

@@ -1,44 +1,61 @@
 ---
 name: initialize_project
-description: "Hydrate a new repository with project-specific details from a PRD."
+description: "Initialize a project workspace using a strict contract, save-map routing, and deterministic run reporting."
 ---
 
 # Initialize Project
 
 ## Purpose
-This skill transforms a generic "Research OS Foundation" repo into a specific project workspace by applying details from the Project Requirements Document (PRD).
+Transform a foundation repo into a project workspace using one canonical contract and explicit artifact routing.
 
-## Inputs
-*   **PRD Content**: The full text of the PRD (from Notion, Context file, or User input).
-*   **Repo Name**: The desired name of the project.
+## Canonical References
+- `S20-workflows/initialize-project-contract.md` (single source of truth)
+- `S00-foundation/save-map.md` (artifact routing table)
 
-## Outputs
-*   Updated `README.md`
-*   Created `S00-foundation/context.md`
-*   Initialized `task.md`
+## Required Inputs
+- `project_name`
+- `goal`
+- `owner`
+- `constraints`
+- `source`
+
+If any required input is missing, stop before edits and return Run Report with warnings.
+
+## Required Outputs
+- `S00-foundation/prd.md`
+- `S00-foundation/context.md`
+- `S20-workflows/project-plan.md`
+- `S20-workflows/run-ledger.md`
+- `S20-workflows/task.md`
+- `README.md` (summary block only)
+- `.gitignore`
+- `src/`
+- `tests/`
 
 ## Steps
-1.  **Analyze PRD**: Read the provided PRD content to extract:
-    *   Project Name
-    *   Goal / Objective
-    *   One-line Summary
-    *   Key Stakeholders
-
-2.  **Create Context**:
-    *   Create a new file: `S00-foundation/context.md`.
-    *   Paste the full PRD content into this file.
-    *   Add a header: `# Project Context: [Project Name]`.
-
-3.  **Update README**:
-    *   Read `README.md`.
-    *   Replace the title `# Research OS Foundation` with `# [Project Name]`.
-    *   Replace the generic description with the "One-line Summary" and "Goal" extracted from the PRD.
-    *   Keep the "Folder Map" and "Operating Loop" sections intact (they are universal).
-
-4.  **Initialize Task List**:
-    *   Create a `task.md` file in the root (or update if exists).
-    *   Add the first task: `- [ ] Initialize Project structure and context`.
+1. Validate required inputs using contract rules.
+2. Resolve destination paths through `S00-foundation/save-map.md`.
+3. Create or update startup artifacts per overwrite policy:
+   - Create-if-missing for required outputs.
+   - Append-only for run ledger.
+   - Append/update checklist behavior for task list.
+   - Version-up for material changes to PRD/context/project plan.
+4. Update README summary text only between:
+   - `<!-- PROJECT_SUMMARY_START -->`
+   - `<!-- PROJECT_SUMMARY_END -->`
+5. Apply do-not-touch protections from the contract.
+6. Emit Run Report in the required format.
 
 ## Stop Rules
-*   Do not overwrite `S10-primitives/` or `S20-workflows/` files.
-*   If `S00-foundation/context.md` already exists, ask before overwriting.
+- Never edit protected paths defined in `S20-workflows/initialize-project-contract.md`.
+- Never edit README content outside summary markers.
+- Never rewrite run ledger history.
+
+## Required Run Report Format
+At end of every run, output:
+
+1. **Created:** semicolon-separated created paths.
+2. **Updated:** semicolon-separated updated paths.
+3. **Skipped:** protected or intentionally unchanged paths.
+4. **Warnings:** missing inputs, overwrite prevention events, policy conflicts.
+5. **Next suggested action:** first executable follow-up task.
