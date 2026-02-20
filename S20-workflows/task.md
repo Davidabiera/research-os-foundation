@@ -14,3 +14,8 @@
 - [ ] Create markdown intake folder and sample note set.
 - [ ] Implement keyword + tag search prototype and measure latency.
 - [ ] Implement weekly summary markdown generation workflow.
+
+## 2026-02-20 initialize_project rerun (PRD-01-minimal)
+- [ ] Confirm tagging schema decision for ops notes.
+- [ ] Confirm canonical storage path for weekly summaries.
+- [ ] Validate existing follow-up tasks still cover v1 scope.
